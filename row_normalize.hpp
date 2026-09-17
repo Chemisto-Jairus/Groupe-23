@@ -8,9 +8,7 @@ private:
     int cols;
 
 public:
-    // Constructor declaration
     RowNormalize(const std::vector<std::vector<double>>& input_data);
 
-    // Your specific function declaration
     RowNormalize row_normalize() const;
 };
