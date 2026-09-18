@@ -1,5 +1,6 @@
 #pragma once
 #include <vector>
+#include <string>
 
 class MatrixDifferences {
 private:
@@ -8,10 +9,8 @@ private:
     int cols;
 
 public:
-    // Constructor declaration
     MatrixDifferences(const std::vector<std::vector<double>>& input_data);
-
-    // Function declarations
     MatrixDifferences row_difference() const;
     MatrixDifferences column_difference() const;
+    void print(const std::string& title) const;
 };
