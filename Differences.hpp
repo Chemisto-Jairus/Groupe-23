@@ -4,6 +4,7 @@
 
 class MatrixDifferences {
 private:
+
     std::vector<std::vector<double>> data;
     int rows;
     int cols;

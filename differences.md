@@ -17,6 +17,7 @@ The algorithms calculate the difference between adjacent elements across specifi
 4.  Subtract the value at the previous column `data[i][j-1]` from the current column `data[i][j]` and store it in `res[i][j]`. The first column remains `0.0`.
 5.  Return the new object.
 
+
 **Column Difference ($\Delta x_{i,j} = x_{i,j} - x_{i-1,j}$):**
 1.  Initialize a zero-filled result matrix (`res`) of the exact same dimensions.
 2.  Iterate through the columns.
