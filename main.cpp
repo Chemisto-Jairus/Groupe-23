@@ -20,7 +20,7 @@ int main() {
     rn.print("Original Data");
 
    
-    RowNormalize rn(raw_data);
+   
     rn.row_normalize().print("Row Normalize");
 
    
