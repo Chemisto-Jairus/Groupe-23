@@ -1,5 +1,6 @@
 #pragma once
 #include <vector>
+#include <string>
 
 class MatrixPercentages {
 private:
@@ -8,10 +9,8 @@ private:
     int cols;
 
 public:
-    // Constructor declaration
     MatrixPercentages(const std::vector<std::vector<double>>& input_data);
-
-    // Function declarations
     MatrixPercentages row_percentage() const;
     MatrixPercentages column_percentage() const;
+    void print(const std::string& title) const;
 };
