@@ -1,4 +1,6 @@
 #include "row_normalize.hpp"
+#include <iostream>
+#include <iomanip>
 
 RowNormalize::RowNormalize(const std::vector<std::vector<double>>& input_data) {
     data = input_data;
@@ -11,12 +13,12 @@ RowNormalize RowNormalize::row_normalize() const {
     for (int i = 0; i < rows; ++i) {
         double min_val = data[i][0];
         double max_val = data[i][0];
-
+        
         for (int j = 1; j < cols; ++j) {
             if (data[i][j] < min_val) min_val = data[i][j];
             if (data[i][j] > max_val) max_val = data[i][j];
         }
-
+        
         double range = max_val - min_val;
         if (range != 0) {
             for (int j = 0; j < cols; ++j) {
@@ -25,4 +27,15 @@ RowNormalize RowNormalize::row_normalize() const {
         }
     }
     return RowNormalize(res);
+}
+
+void RowNormalize::print(const std::string& title) const {
+    std::cout << title << ":\n";
+    for (const auto& row : data) {
+        for (double val : row) {
+            std::cout << std::fixed << std::setprecision(2) << val << "\t";
+        }
+        std::cout << "\n";
+    }
+    std::cout << "---------------------------------\n";
 }

@@ -1,5 +1,6 @@
 #pragma once
 #include <vector>
+#include <string>
 
 class RowNormalize {
 private:
@@ -9,6 +10,6 @@ private:
 
 public:
     RowNormalize(const std::vector<std::vector<double>>& input_data);
-
     RowNormalize row_normalize() const;
+    void print(const std::string& title) const;
 };
